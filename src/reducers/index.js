@@ -21,16 +21,6 @@ export default (state = initialState, action) => {
         ...state,
         count: --action.payload
       };
-
-    //   return {
-    //     ...state,
-    //     count: action.payload
-    //   };
-    // case DECREMENT:
-    //   return {
-    //     ...state,
-    //     count: action
-    //   };
     default:
       return state;
   }
