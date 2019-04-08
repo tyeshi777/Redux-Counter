@@ -6,6 +6,7 @@ class Counter extends Component {
   state = {
     count: 0
   };
+
   incrementIfOdd = () => {
     // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
@@ -14,16 +15,6 @@ class Counter extends Component {
   incrementAsync = () => {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
-  };
-
-  incrementByOne = e => {
-    e.preventDefault();
-    this.props.increment(this.state.count);
-  };
-
-  decrementByOne = e => {
-    e.preventDefault();
-    this.props.decrement(this.state.count);
   };
 
   render() {
@@ -36,7 +27,7 @@ class Counter extends Component {
         <button
           onClick={() => {
             /* Fill me in */
-            this.incrementByOne;
+            this.props.increment(this.props.count);
           }}
         >
           +
@@ -44,7 +35,7 @@ class Counter extends Component {
         <button
           onClick={() => {
             /* Fill me in */
-            this.decrementByOne;
+            this.props.decrement(this.props.count);
           }}
         >
           -
